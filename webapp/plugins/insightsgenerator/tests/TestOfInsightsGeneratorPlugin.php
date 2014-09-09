@@ -562,7 +562,7 @@ class TestOfInsightsGeneratorPlugin extends ThinkUpInsightUnitTestCase {
                 }
                 $html_email = $merge_vars['insights'];
                 $this->debug($html_email);
-                $days_left = 13 - $i;
+                $days_left = 14 - $i;
                 if ($days_left <= 13 && $days_left > 2) {
                     $this->assertPattern('/http:\/\/example.com\/thinkup\/membership.php/', $html_email);
                     $this->assertPattern('/'.$days_left.' days left in your free trial/', $html_email);

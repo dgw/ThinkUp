@@ -270,7 +270,7 @@ class InsightsGeneratorPlugin extends Plugin implements CrawlerPlugin {
                     if ($owner->is_free_trial) {
                         $creation_date = new DateTime($owner->joined);
                         $now = new DateTime();
-                        $end_of_trial = $creation_date->add(new DateInterval('P14D'));
+                        $end_of_trial = $creation_date->add(new DateInterval('P15D'));
                         if ($end_of_trial >= $now) {
                             $interval = $now->diff($end_of_trial);
                             $days_left = $interval->format('%a');
